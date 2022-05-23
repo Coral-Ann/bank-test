@@ -115,16 +115,8 @@ So that I can access my stored amount,
 I want to withdraw an amount from my account.
 
 As a user,
-So I can view my stored money,
-I want to be able to see my account balance.
-
-As a user,
-So that my money is recorded,
-I want my deposits and withdrawals to be saved.
-
-As a user,
 So that I can view my previous transactions,
-I want to see a statement with my withdrawals, deposits & dates in which these occurred.
+I want to see a statement with my withdrawals, deposits, dates, and balance.
 ```
 
 

@@ -1,7 +1,9 @@
-require_relative '../lib/account.rb'
+# frozen_string_literal: true
+
+require_relative '../lib/account'
 
 describe Account do
-  let (:account) { Account.new }
+  let(:account) { Account.new }
 
   it 'has a starting balance of 0' do
     expect(account.balance).to eq 0
