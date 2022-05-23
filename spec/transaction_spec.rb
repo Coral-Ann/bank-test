@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative '../lib/transaction'
-require_relative '../lib/account'
 
 describe Transaction do
   let(:account) { double(:account, balance: 1000, deposit: 0) }

@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'date'
-require_relative '../lib/account'
 
-# Purpose: Stores a transaction.
+# Purpose: Holds current transaction details.
 class Transaction
   attr_reader :credit, :debit, :new_balance, :date
 

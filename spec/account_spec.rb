@@ -16,24 +16,19 @@ describe Account do
       account.deposit(1000)
       expect(account.balance).to eq 1000
     end
-
     it 'can return the deposit as a transaction' do
-      expect(account.deposit(1000)).to be_instance_of Transaction
+      expect(account.deposit(1000)).to include(a_kind_of(Transaction))
     end
   end
 
   describe '#withdraw' do
-    before do
-      account.deposit(1000)
-    end
-
+    before { account.deposit(1000) }
     it 'can withdraw an amount from the balance' do
       account.withdraw(200)
       expect(account.balance).to eq 800
     end
-
     it 'can return the withdrawal as a transaction' do
-      expect(account.withdraw(1000)).to be_instance_of Transaction
+      expect(account.withdraw(1000)).to include(a_kind_of(Transaction))
     end
   end
 end
