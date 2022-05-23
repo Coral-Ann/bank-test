@@ -42,27 +42,27 @@ Use irb from the main repository and require the following file:
 
 ```zsh
 irb
-require './lib/bank_account.rb'
+require './lib/account.rb'
 ```
 
 Now make your own bank account:
 ```zsh
-yourname = Account.new
+account_name = Account.new
 ```
 
 To deposit an amount:
 ```zsh
-yourname.deposit(100)
+account_name.deposit(100)
 ```
 
-To withdraw an amount:
+To withdraw an amount (an error will be raised if this exceeds the balance):
 ```zsh
-yourname.withdraw(50)
+account_name.withdraw(50)
 ```
 
 View your full statement:
 ```zsh
-yourname.view_statement
+account_name.view_statement
 ```
 
 
@@ -79,6 +79,7 @@ Feel free to check rubocop from the main repository:
 ```zsh
 rubocop
 ```
+Rubocop should have two ignored failures, one in regards to the spec_helper.rb & the other regarding a test file length.
 
 
 Planning Process
@@ -88,13 +89,13 @@ My basic plan is as follows:
 - Convert the requirements into user stories.
 - Create a plan for my classes and objects.
 - Create the initial files (repo > README > git init > rspec init > gemfile).
-- Code each user story following the TDD process (feature test in irb > create unit test > create functionality by passing the test).
-- Consider edge case user stories to potentially add.
+- Code each user story following the TDD process (feature test in irb > create unit test > create functionality by passing the test). I will check rubocop throughout.
+- Consider edge cases to potentially cover.
 
 
 User Stories
 -----
-The client requests are broken down as follows:
+The user requests are broken down as follows:
 
 ```
 As a user,
@@ -114,11 +115,19 @@ So that I can view my previous transactions,
 I want to see a statement with my withdrawals, deposits, dates, and balance.
 ```
 
+Edge case added:
+
+```
+As a user,
+So that I only spend what I have,
+I want to be stopped from removing more than my account contains.
+```
+
 
 Domain Model
 -----
 
-WIP
+![Screenshot](https://i.imgur.com/3feXRIg.png)
 
 Tech Stack
 -----
@@ -127,4 +136,3 @@ Tech Stack
 - Rspec
 - Rubocop
 - Simplecov
-- Timecop
