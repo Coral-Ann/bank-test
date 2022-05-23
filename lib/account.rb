@@ -18,6 +18,8 @@ class Account
   end
 
   def withdraw(amount)
+    raise 'Not enough credit' if @balance < amount
+
     @balance -= amount
     record_withdrawal(amount)
   end

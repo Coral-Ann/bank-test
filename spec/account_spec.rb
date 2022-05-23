@@ -14,7 +14,7 @@ describe Account do
   it 'should format the current account statement' do
     account.deposit(1000)
     expect { account.view_statement }.to output(
-      "    date   || credit || debit || balance\n23/05/2022 || 1000 || 0 || 1000 \n"
+      "    date   || credit || debit || balance\n#{Date.today.strftime('%d/%m/%Y')} || 1000 || 0 || 1000 \n"
     ).to_stdout
   end
 
@@ -36,6 +36,9 @@ describe Account do
     end
     it 'should return the withdrawal as a transaction hash' do
       account.withdraw(100) { is_expected.to have_key(:debit) }
+    end
+    it 'should raise an error if account is empty' do
+      expect { account.withdraw(1500) }.to raise_error('Not enough credit')
     end
   end
 end
