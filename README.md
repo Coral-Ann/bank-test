@@ -93,7 +93,7 @@ My basic plan is as follows:
 - Convert the requirements into user stories.
 - Create a plan for my classes and objects.
 - Create the initial files (repo > README > git init > rspec init > gemfile).
-- Code each user story, test first (TDD).
+- Code each user story following the TDD process (feature test in irb > create unit test > create functionality by passing the test).
 - Consider edge case user stories to potentially add.
 
 
@@ -111,12 +111,12 @@ So that I can add money to this account,
 I want to deposit an amount given.
 
 As a user,
-So I can view my stored money,
-I want to be able to see my account balance.
-
-As a user,
 So that I can access my stored amount,
 I want to withdraw an amount from my account.
+
+As a user,
+So I can view my stored money,
+I want to be able to see my account balance.
 
 As a user,
 So that my money is recorded,
