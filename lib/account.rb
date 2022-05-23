@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Purpose: Manages user account action.
+# Purpose: Manages user account interaction.
 class Account
   attr_reader :balance
 
