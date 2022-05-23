@@ -14,7 +14,7 @@ describe Account do
   it 'should format the current account statement' do
     account.deposit(1000)
     expect { account.view_statement }.to output(
-      "    date   || credit || debit || balance\n#{Date.today.strftime('%d/%m/%Y')} || 1000 || 0 || 1000 \n"
+      "    date   || credit || debit || balance\n#{Date.today.strftime('%d/%m/%Y')} || 1000.0 || 0.0 || 1000.0 \n"
     ).to_stdout
   end
 
