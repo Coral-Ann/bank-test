@@ -60,11 +60,6 @@ To withdraw an amount:
 yourname.withdraw(50)
 ```
 
-View your balance:
-```zsh
-yourname.view_balance
-```
-
 View your full statement:
 ```zsh
 yourname.view_statement

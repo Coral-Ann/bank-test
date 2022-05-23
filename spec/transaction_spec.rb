@@ -19,6 +19,6 @@ describe Transaction do
   end
 
   it 'stores the current date' do
-    expect(transaction.date).to eq Date.today
+    expect(transaction.date).to eq Date.today.strftime('%d/%m/%Y')
   end
 end

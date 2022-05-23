@@ -21,4 +21,10 @@ describe Statement do
     statement.add_transaction(transaction2)
     expect(statement.statement_list.length).to eq 2
   end
+
+  it 'should print the statement heading correctly' do
+    expect do
+      statement.pretty_statement
+    end.to output(a_string_including('    date   || credit || debit || balance')).to_stdout
+  end
 end

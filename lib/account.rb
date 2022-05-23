@@ -3,7 +3,7 @@
 require_relative '../lib/transaction'
 require_relative '../lib/statement'
 
-# Purpose: Manages account.
+# Purpose: Manages user actions on account.
 class Account
   attr_reader :balance, :statement
 
@@ -14,18 +14,27 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    add_to_statement(amount)
+    record_deposit(amount)
   end
 
   def withdraw(amount)
     @balance -= amount
-    add_to_statement(amount)
+    record_withdrawal(amount)
+  end
+
+  def view_statement
+    @statement.pretty_statement
   end
 
   private
 
-  def add_to_statement(amount)
-    current_transaction = Transaction.new(0, amount, @balance)
-    @statement.add_transaction(current_transaction)
+  def record_deposit(amount)
+    new_deposit = Transaction.new(amount, 0, @balance)
+    @statement.add_transaction(new_deposit.stored_data)
+  end
+
+  def record_withdrawal(amount)
+    new_withdrawal = Transaction.new(0, amount, @balance)
+    @statement.add_transaction(new_withdrawal.stored_data)
   end
 end

@@ -11,24 +11,31 @@ describe Account do
     expect(account.balance).to eq 0
   end
 
+  it 'should format the current account statement' do
+    account.deposit(1000)
+    expect { account.view_statement }.to output(
+      "    date   || credit || debit || balance\n23/05/2022 || 1000 || 0 || 1000 \n"
+    ).to_stdout
+  end
+
   describe '#deposit' do
-    it 'can deposit an amount to the balance' do
+    it 'can deposit the correct amount to the balance' do
       account.deposit(1000)
       expect(account.balance).to eq 1000
     end
-    it 'can return the deposit as a transaction' do
-      expect(account.deposit(1000)).to include(a_kind_of(Transaction))
+    it 'should return the deposit as a transaction hash' do
+      account.deposit(1000) { is_expected.to have_key(:credit) }
     end
   end
 
   describe '#withdraw' do
     before { account.deposit(1000) }
-    it 'can withdraw an amount from the balance' do
+    it 'can withdraw the correct amount from the balance' do
       account.withdraw(200)
       expect(account.balance).to eq 800
     end
-    it 'can return the withdrawal as a transaction' do
-      expect(account.withdraw(1000)).to include(a_kind_of(Transaction))
+    it 'should return the withdrawal as a transaction hash' do
+      account.withdraw(100) { is_expected.to have_key(:debit) }
     end
   end
 end

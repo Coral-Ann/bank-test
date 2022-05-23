@@ -10,6 +10,13 @@ class Transaction
     @credit = credit
     @debit = debit
     @new_balance = new_balance
-    @date = Date.today
+    @date = Date.today.strftime('%d/%m/%Y')
+  end
+
+  def stored_data
+    { credit: @credit,
+      debit: @debit,
+      new_balance: @new_balance,
+      date: @date }
   end
 end
