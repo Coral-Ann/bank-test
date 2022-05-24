@@ -30,6 +30,6 @@ class Statement
   end
 
   def format(number)
-    number == 0 ? "" : '%.2f' % number
+    number.zero? ? '' : '%.2f' % number
   end
 end

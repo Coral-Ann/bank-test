@@ -6,7 +6,7 @@ ruby '3.0.2'
 
 group :development, :test do
   gem 'rspec'
-  gem 'rubocop', '1.20'
+  gem 'rubocop', '~> 1.29'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
 end
