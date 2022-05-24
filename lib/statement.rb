@@ -25,7 +25,11 @@ class Statement
 
   def statement_body
     @statement_list.each do |item|
-      puts "#{item[:date]} || #{item[:credit]} || #{item[:debit]} || #{item[:new_balance]} "
+      puts "#{item[:date]} || #{format(item[:credit])} || #{format(item[:debit])} || #{format(item[:new_balance])} "
     end
+  end
+
+  def format(number)
+    number == 0 ? "" : '%.2f' % number
   end
 end
