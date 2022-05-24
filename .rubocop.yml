@@ -1,0 +1,7 @@
+# Block length to ignore test length changes & block comments to ignore spec_helper changes.
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+
+Style/BlockComments:
+  Enabled: false

@@ -79,7 +79,6 @@ Feel free to check rubocop from the main repository:
 ```zsh
 rubocop
 ```
-Rubocop should have two ignored failures, one in regards to the spec_helper.rb & the other regarding a test file length.
 
 
 Planning Process
