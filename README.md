@@ -65,6 +65,9 @@ View your full statement:
 account_name.view_statement
 ```
 
+This is how it looks:
+![Screenshot](https://i.imgur.com/g9IaPYp.png)
+
 
 Test Usage
 -----
