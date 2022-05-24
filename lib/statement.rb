@@ -30,6 +30,6 @@ class Statement
   end
 
   def decimal(number)
-    number.zero? ? '' : format('%.2f', number)
+    number.zero? ? '     ' : format('%.2f', number)
   end
 end
