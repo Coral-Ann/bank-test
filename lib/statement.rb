@@ -12,24 +12,14 @@ class Statement
     @statement_list.push(transaction)
   end
 
+  def decimal(number)
+    number.zero? ? '' : format('%.2f', number)
+  end
+
   def pretty_statement
-    statement_header
-    statement_body
-  end
-
-  private
-
-  def statement_header
-    puts '    date   || credit || debit || balance'
-  end
-
-  def statement_body
-    @statement_list.each do |item|
+    puts 'date || credit || debit || balance'
+    @statement_list.reverse_each do |item|
       puts "#{item[:date]} || #{decimal(item[:credit])} || #{decimal(item[:debit])} || #{decimal(item[:new_balance])} "
     end
-  end
-
-  def decimal(number)
-    number.zero? ? '     ' : format('%.2f', number)
   end
 end
