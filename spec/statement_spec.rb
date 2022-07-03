@@ -25,6 +25,6 @@ describe Statement do
   it 'should print the statement heading correctly' do
     expect do
       statement.pretty_statement
-    end.to output(a_string_including('    date   || credit || debit || balance')).to_stdout
+    end.to output(a_string_including('date || credit || debit || balance')).to_stdout
   end
 end

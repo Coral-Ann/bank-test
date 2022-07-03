@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-24T19:29:15+01:00">2022-05-24T19:29:15+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-07-03T10:48:58+01:00">2022-07-03T10:48:58+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.37
+         2.41
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>104</b> relevant lines,
-    <span class="green"><b>104</b> lines covered</span> and
+    <b>99</b> relevant lines,
+    <span class="green"><b>99</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -84,11 +84,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#be8d655ce4d32072b1f7d6d3e473c432087b3829" class="src_link" title="lib/statement.rb">lib/statement.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">35</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">17</td>
+            <td class="cell--number">25</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.53</td>
+            <td class="cell--number">3.00</td>
             
           </tr>
         
@@ -660,8 +660,8 @@
     
 
     <div class="t-line-summary">
-      <b>17</b> relevant lines.
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>12</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -833,34 +833,23 @@
 
             
 
-            <code class="ruby">  def pretty_statement</code>
+            <code class="ruby">  def decimal(number)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="16">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="16">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    statement_header</code>
+            <code class="ruby">    number.zero? ? &#39;&#39; : format(&#39;%.2f&#39;, number)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="17">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    statement_body</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -871,7 +860,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -882,24 +871,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
+          <li class="covered" data-hits="1" data-linenumber="19">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">  def pretty_statement</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="covered" data-hits="2" data-linenumber="20">
+            <span class="hits">2</span>
             
+
+            
+
+            <code class="ruby">    puts &#39;date || credit || debit || balance&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="21">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    @statement_list.reverse_each do |item|</code>
           </li>
         </div>
       
@@ -910,18 +910,18 @@
 
             
 
-            <code class="ruby">  def statement_header</code>
+            <code class="ruby">      puts &quot;#{item[:date]} || #{decimal(item[:credit])} || #{decimal(item[:debit])} || #{decimal(item[:new_balance])} &quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="23">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="23">
+            
             
 
             
 
-            <code class="ruby">    puts &#39;    date   || credit || debit || balance&#39;</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -938,116 +938,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def statement_body</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="27">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    @statement_list.each do |item|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      puts &quot;#{item[:date]} || #{decimal(item[:credit])} || #{decimal(item[:debit])} || #{decimal(item[:new_balance])} &quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def decimal(number)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="33">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    number.zero? ? &#39;     &#39; : format(&#39;%.2f&#39;, number)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -1544,7 +1434,7 @@
 
             
 
-            <code class="ruby">      &quot;    date   || credit || debit || balance\n#{Date.today.strftime(&#39;%d/%m/%Y&#39;)} || 1000.00 ||       || 1000.00 \n&quot;</code>
+            <code class="ruby">      &quot;date || credit || debit || balance\n#{Date.today.strftime(&#39;%d/%m/%Y&#39;)} || 1000.00 ||  || 1000.00 \n&quot;</code>
           </li>
         </div>
       
@@ -2180,7 +2070,7 @@
 
             
 
-            <code class="ruby">    end.to output(a_string_including(&#39;    date   || credit || debit || balance&#39;)).to_stdout</code>
+            <code class="ruby">    end.to output(a_string_including(&#39;date || credit || debit || balance&#39;)).to_stdout</code>
           </li>
         </div>
       
