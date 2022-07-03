@@ -66,7 +66,7 @@ account_name.view_statement
 ```
 
 This is how it looks:
-![Screenshot](https://i.imgur.com/g9IaPYp.png)
+![Screenshot](https://i.imgur.com/TXw99Ke.png)
 
 
 Test Usage
