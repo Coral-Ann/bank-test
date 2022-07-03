@@ -115,6 +115,10 @@ I want to withdraw an amount from my account.
 As a user,
 So that I can view my previous transactions,
 I want to see a statement with my withdrawals, deposits, dates, and balance.
+
+As a user,
+So that my most recent transactions show first,
+I want to view the statement in reverse cronological order.
 ```
 
 Edge case added:
