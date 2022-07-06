@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../lib/statement'
+require_relative '../lib/statement_list'
 
-describe Statement do
-  let(:statement) { Statement.new }
+describe Statement_list do
+  let(:statement) { Statement_list.new }
   let(:transaction1) { double(:transaction, credit: 1000, debit: 0, new_balance: 1000) }
   let(:transaction2) { double(:transaction, credit: 0, debit: 500, new_balance: 500) }
 

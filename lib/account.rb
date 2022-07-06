@@ -1,7 +1,6 @@
 # frozen_string_literal: true
-
 require_relative '../lib/transaction'
-require_relative '../lib/statement'
+require_relative '../lib/statement_list'
 
 # Purpose: Manages user actions on account.
 class Account
@@ -9,7 +8,7 @@ class Account
 
   def initialize
     @balance = 0
-    @statement = Statement.new
+    @statement = Statement_list.new
   end
 
   def deposit(amount)

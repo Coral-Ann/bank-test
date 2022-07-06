@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Purpose: Holds account transaction history.
-class Statement
+class Statement_list
   attr_reader :statement_list
 
   def initialize
